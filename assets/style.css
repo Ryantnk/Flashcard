@@ -10,7 +10,11 @@ body {
 }
 
 #container {
-    display: flex; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 4rem;
+    gap: 3rem; 
 }
 
 .cartao {
@@ -23,6 +27,7 @@ body {
 .cartao__conteudo {
     background-color: var(--card-front-color);
     text-align: center;
+    /* background-color: aquamarine; */
     height: 100%;
     transform-style: preserve-3d;
     transition: transform 300ms ease-in-out;
@@ -52,7 +57,7 @@ body {
     color: var(--card-back-color);
     font-weight: 700;
 }
-.cartao:hover .cartao__conteudo {
+.cartao.active .cartao__conteudo {
     transform: rotateY(180deg);
 }
  
@@ -66,6 +71,9 @@ body {
     position: absolute;
     height: 100%;
     width: 100%;
+}
+.cartao__conteudo__resposta{
+    transform: rotateY(180deg);
 }
 footer {
     background-color: black;
